@@ -1,0 +1,25 @@
+﻿@model List<Entities.Product>
+@{
+    ViewData["Title"] = "GetProducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>GetProducts</h1>
+<table>
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Detail</th>
+        <th>Category</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+        <tr>
+            <td>@x.productId</td>
+            <td>@x.productName</td>
+            <td>@x.productDetail</td>
+            <td>@x.Category.categoryName</td>
+        </tr>
+    }
+</table>
+
